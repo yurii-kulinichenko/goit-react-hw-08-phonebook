@@ -27,8 +27,8 @@ export const ContactForm = () => {
     initialValues,
     validationSchema,
     onSubmit: (values, actions) => {
-      const existedContact = contactList.find(contact =>
-        contact.name.toLowerCase().includes(values.name.toLowerCase())
+      const existedContact = contactList.find(
+        contact => contact.name.toLowerCase() === values.name.toLowerCase()
       );
 
       if (existedContact) {
